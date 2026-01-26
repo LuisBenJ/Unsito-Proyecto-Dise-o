@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publicar Noticia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="lo.css">
+</head>
+<body>
+  <header>
+    <h1>Universidad de la sierra sur</h1>
+    <p>Panel de Administración</p>
+  </header>
+  <nav>
+    <a href="../Inicio.html">Inicio</a>
+    <a href="../Noti/notidos.html">Noticias</a>
+    <a href="#">Contacto</a>
+  </nav>
+
+  <div class="form-container">
+    <h2>Publicar Nueva Noticia</h2>
+    <form action="procesar_noticia.php" method="post">
+      <label for="titulo">Título de la noticia:</label>
+      <input type="text" id="titulo" name="titulo" required>
+
+      <label for="autor">Autor:</label>
+      <input type="text" id="autor" name="autor" required>
+
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Selecciona una categoría</option>
+        <option value="academicos">Académicos</option>
+        <option value="eventos">Eventos</option>
+        <option value="sociales">Sociales</option>
+        <option value="noticias">Noticias Generales</option>
+      </select>
+
+      <label for="contenido">Contenido de la noticia:</label>
+      <textarea id="contenido" name="contenido" required></textarea>
+
+
+      <form action="upload.php" method="post" enctype="multipart/form-data">
+      <label for="archivo">Selecciona una imagen:</label>
+      <input type="file" id="archivo" name="archivo" accept="image/*">
+      <br><br>
+      
+      </form>
+
+      <button type="submit">Publicar Noticia</button>
+    </form>
+  </div>
+
+<footer>
+    <p>© 2025 Universidad de la Sierra Sur - Todos los derechos reservados</p>
+    <div class="social">
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">Instagram</a>
+    </div>
+  </footer>
+</body>
+</html>
+

@@ -1,0 +1,128 @@
+/* ===== Fuente y estilos generales ===== */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f4; /* base neutra */
+  margin: 0;
+  padding: 20px;
+  color: #2e2e2e; /* texto oscuro */
+}
+
+/* ===== Encabezado ===== */
+header {
+  background-color: #680c07; /* Primario */
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+header h1 {
+  margin: 0;
+}
+
+/* ===== Menú de navegación ===== */
+nav {
+  background-color: #c9a227; /* Dorado suave */
+  padding: 10px;
+  text-align: center;
+}
+nav a {
+  color: #2e2e2e; /* Texto oscuro sobre dorado */
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #680c07; /* Hover primario */
+}
+
+/* ===== Contenedor genérico ===== */
+.container,
+.form-container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+.container h2,
+.form-container h2 {
+  text-align: center;
+  color: #990300;
+}
+
+/* ===== Formularios ===== */
+.form-group {
+  margin-bottom: 15px;
+}
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #2e2e2e;
+}
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  background-color: #f5e1d3; /* Beige cálido */
+  color: #2e2e2e;
+}
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Campos específicos login */
+input[type="text"],
+input[type="password"] {
+  border: 1px solid #777;
+  border-radius: 4px;
+}
+
+/* Botones */
+button,
+input[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #680c07; /* Primario */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+button:hover,
+input[type="submit"]:hover {
+  background-color: #c9a227; /* Hover dorado */
+  color: #2e2e2e;
+}
+
+/* ===== Detalles adicionales ===== */
+.date {
+  font-size: 0.9em;
+  color: #556b2f; /* Verde oliva */
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: #2e2e2e; /* Gris carbón */
+  color: #f5e1d3; /* Beige contraste */
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+footer .social a {
+  color: #c9a227; /* Dorado para íconos */
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+footer .social a:hover {
+  color: #680c07; /* Hover primario */
+}

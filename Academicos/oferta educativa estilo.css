@@ -1,0 +1,243 @@
+:root{
+  --header: #ffffff;
+  --pies: #430707;
+  --accent: #fafafa;
+  --text: #0f1720; 
+  --carrera: #ffffff;
+ 
+}
+
+
+
+body{
+  margin:0;
+  font-family:Segoe UI, Roboto, Arial, sans-serif;
+  background-color:#cad0d4;
+  color:var(--text);
+  min-height:300vh;
+  display:flex;
+  flex-direction:column
+}
+
+.cabecera{
+  display: flex;  
+  padding: 1rem;
+  background: var(--header);
+  min-height: 10%;
+  align-items: flex-start; 
+}
+
+.banner{
+  display: flex;
+ 
+  flex: 1 1 80%;  
+  width: 100%;      
+  padding: 15px;  
+  
+
+  min-height: 50px; 
+  
+  min-width: 400px;
+  margin-left: 10%;
+  margin-top: 5px; 
+  border-radius: 8px; 
+
+
+  align-items: center; 
+  justify-content: center;
+}
+
+.banner img {
+    
+    max-width: 100%; 
+   
+    height: 100%; 
+    object-fit: contain; 
+}
+
+.logo-universidad{ 
+  flex: 1; 
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  width: 150px ;
+  height: 150px;
+ margin-top: -3%; 
+ margin-left: -19px;
+}
+
+.split {
+  display: flex;
+  gap: 1rem;
+  align-items: center; 
+}
+
+
+
+
+
+
+
+.cuerpo{
+  flex:1;
+  padding:1rem;
+  display:flex;
+  flex-direction:column;
+  gap:1rem;
+  background-color:#fafafa;
+  height: 50%;
+}
+
+.cuadro-carreras {
+    background: var(--carrera);
+    display: flex; 
+    border-radius: 15px;
+    padding: 1rem;
+    min-height: 300px;
+    flex-wrap: nowrap;
+    flex: 0 0 auto;     
+    width: 95%; 
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+.carrera-mini {
+  flex: 0 0 15%;
+  height: 250px;
+  background-color: var(--accent); 
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 20px 10px 20px 20px; 
+ box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+ 
+   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+.carrera-mini:hover {
+  transform: scale(1.1); 
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+
+
+.cuadro-universidades{
+ background: var(--header);
+ display: flex; 
+  border-radius: 15px;
+  padding: 1rem;
+  min-height: 350px;
+  flex-wrap: nowrap;
+
+  flex: 0 0 auto; 
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+.datos-universidad{
+  flex:1;
+  padding:1rem;
+  border-radius:8px;
+  background-color:var(--accent);
+  min-height:80px;
+
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80%;
+  margin-left: 10px;
+  margin-right: 10px;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.perfiles{
+background-color: var(--accent);
+display: flex; 
+flex-direction: column;
+  border-radius: 15px;
+  padding: 1rem;
+  min-height: 150px;
+  
+
+  flex: 0 0 auto; 
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
+
+
+
+.pie{
+  height: 300px; 
+  background:var(--pies);
+  margin-top:auto;
+  border-top:1px solid rgba(0,0,0,0.5);
+  
+  
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+
+.UNI-suneo {
+  width: 140px;
+  height: 170px; 
+  background-color: var(--header);
+  
+  margin: 5% 5% 5% 2%;
+  
+  border-radius: 50%;
+
+}
+
+
+
+
+
+h1 { 
+  color: #4a0000; 
+  font-family: "Arial", "Helvetica", sans-serif; 
+  font-size: 32px; 
+  font-weight: 700;
+  
+  text-align: center; 
+  
+  margin: 20px auto 10px auto; 
+}
+
+p { 
+  color: #000000; 
+  font-family: "Arial", "Helvetica", sans-serif; 
+  line-height: 1.6; 
+
+  margin: 15px 2%; 
+  
+  
+  max-width: 900px; 
+  margin-left: auto; 
+  margin-right: auto; 
+}
+
+
+  
+@media (max-width:700px){
+  .site-header{
+    flex-direction:column;
+    align-items:stretch
+  }
+
+  .split{flex-direction:column}
+}

@@ -1,0 +1,1094 @@
+/* ===== Fuente y estilos generales ===== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+/* Regla general para todas las imágenes */
+img {
+    max-width: 100%;
+    /* nunca exceder el ancho del contenedor */
+    height: auto;
+    /* mantener proporción */
+    display: block;
+    /* evita espacios extra */
+}
+
+/* ===== Encabezado ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: white;
+    padding: 15px 30px;
+}
+
+header img {
+    height: auto;
+    /* se adapta */
+    max-height: 80px;
+    /* límite máximo */
+    max-width: 100%;
+}
+
+header .titulo h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header .titulo h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    /* base do.css */
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: block;
+    /* oculto en escritorio (control vía media query) */
+}
+
+/* Botón login */
+.login-button {
+    background-color: purple;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: darkviolet;
+}
+
+/* ===== Menú desplegable móvil ===== */
+nav.menu {
+    background-color: #A91B0D;
+    max-height: 0;
+    /* oculto por defecto */
+    overflow: hidden;
+    /* oculta contenido */
+    transition: max-height 0.4s ease;
+    /* animación suave */
+}
+
+nav.menu.open {
+    max-height: 300px;
+    /* despliegue base do.css */
+}
+
+nav.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav.menu li {
+    margin: 10px 0;
+}
+
+nav.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav.menu a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Menú de navegación superior ===== */
+nav {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-menu li {
+    flex: 1;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-menu a.active {
+    color: rgb(138, 47, 47);
+    border-bottom: 3px solid rgb(138, 47, 47);
+    font-weight: bold;
+}
+
+/* ===== Carrusel ===== */
+.carousel {
+    width: 100%;
+    max-height: 400px;
+    /* límite máximo */
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slide 18s infinite;
+}
+
+.slides img {
+    flex: 0 0 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    16% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    49% {
+        transform: translateX(-200%);
+    }
+
+    66% {
+        transform: translateX(-300%);
+    }
+
+    82% {
+        transform: translateX(-400%);
+    }
+
+    100% {
+        transform: translateX(-500%);
+    }
+}
+
+/* portadas en páginas */
+.hero img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== Contenido principal ===== */
+.container {
+    max-width: 100%;
+    /* base do.css */
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.container h2 {
+    color: #990300;
+}
+
+/* ===== Tarjetas genéricas ===== */
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 250px;
+    background: #fafafa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+    color: #A91B0D;
+}
+
+/* ===== (dosf.css) ===== */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.ad {
+    background-color: #680c07;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+}
+
+.ad img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.ad h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #06eff7;
+}
+
+.source {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.ad-button {
+    display: inline-block;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.ad-button:hover {
+    background-color: #005fa3;
+}
+
+/* ===== (eventos.html) ===== */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.event-card {
+    display: grid;
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    padding: 16px;
+    border: 1px solid #eee;
+}
+
+.event-date {
+    background: #A91B0D;
+    color: white;
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.event-card h3 {
+    margin: 8px 0;
+    color: #A91B0D;
+}
+
+.event-details {
+    display: grid;
+    gap: 10px;
+    color: #555;
+    font-size: 0.95rem;
+    margin: 10px 0 14px;
+}
+
+.event-card button {
+
+    align-self: flex-end;
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+
+
+}
+
+.event-card button:hover {
+    background-color: #005fa3;
+}
+
+/* ===== (esti.css) ===== */
+
+/* ===== CONTENEDOR ===== */
+.foro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ===== ÁREA DEL FORO ===== */
+.foro-area {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ===== INPUTS ===== */
+.foro-nombre,
+.foro-comentario {
+    width: 70%;
+    padding: 6px;
+    border: 2px solid #990300;
+    border-radius: 6px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.foro-nombre {
+    margin-bottom: 10px;
+}
+
+
+.foro-comentario {
+    height: 60px;
+    resize: none;
+}
+
+
+.foro-comentario:focus {
+    outline: none;
+    box-shadow: 0 0 6px rgba(153, 3, 0, 0.4);
+}
+
+
+/* ===== BOTÓN ===== */
+.foro-btn {
+    margin-top: 10px;
+    padding: 8px 20px;
+    border: none;
+    background-color: #990300;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+
+.foro-btn:hover {
+    background-color: #A91B0D;
+}
+
+
+.foro-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* ===== ÁREA DE COMENTARIOS ===== */
+.foro-area-reflejo {
+    width: 70%;
+    margin-top: 16px;
+    background-color: white;
+    border: 2px solid #990300;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+
+/* ===== COMENTARIO ===== */
+.foro-comentario-mostrado {
+    background: white;
+    border: 1.5px solid #990300;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 15px;
+
+
+    /* animación de entrada */
+    animation: aparecer 0.35s ease;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+
+.foro-comentario-mostrado:hover {
+    box-shadow: 0 4px 12px rgba(153, 3, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+
+.foro-comentario-mostrado strong {
+    color: #990300;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* ===== ANIMACIÓN ===== */
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Inputs/Labels*/
+input {
+    display: none;
+}
+
+label {
+    font-size: 2.6rem;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.1s ease;
+}
+
+input:checked+label {
+    color: #ff3b5c;
+    transform: scale(1.1);
+}
+
+input:active {
+    transform: scale(.9);
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    /*margen extra de dosf.css */
+}
+
+footer .social a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+footer .social a:hover {
+    color: #990300;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .carousel {
+        max-height: 250px;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    /* Mostrar botón hamburguesa y menú móvil */
+    .menu-toggle {
+        display: block;
+    }
+
+    nav.menu {
+        display: block;
+    }
+
+    /* Carrusel en móviles: una imagen por fila */
+    .slides {
+        flex-direction: column;
+        width: 100%;
+        animation: none;
+    }
+
+    .slides img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Ajuste grid noticias/eventos */
+    .news-grid,
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* CONTENEDOR DE IMAGEN MEJORADO */
+.event-card > div:has(.img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-height: 250px; /* Altura máxima controlada */
+}
+
+
+.img {
+    width: 400px;
+    height: 500px;
+    
+ 
+   
+   
+}
+
+/* Efecto hover para la imagen */
+.event-card:hover .img {
+    transform: scale(1.03);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    --foto-mini: #fafafa;
+    --fotos: #e0e0e0;
+    --accent: #fafafa;
+    --carrera: #ffffff;
+    --fondo-eventos: #cbcbcb;
+    --fondo-slider: #cbcbcb;
+    --rojo-u: #A91B0D;
+    --borde-cuadro: rgba(93, 106, 143, 0.4);
+}
+
+/* ---------------------------------
+   EVENTOS MINI
+---------------------------------- */
+
+.eventos-mini {
+    flex: 0 0 200px;
+    height: 350px;
+    background-color: var(--accent);
+    border-radius: 8px;
+    margin: 20px 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.eventos-mini:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------------------------------
+   CONTENEDOR EVENTOS
+---------------------------------- */
+
+.fondo-eventos {
+    display: flex;
+    width: 95%;
+    margin: 20px auto;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+/* EVENTO PRINCIPAL */
+
+.evento-principal {
+    flex: 0 0 20%;
+    background-color: var(--accent);
+    min-height: 400px;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    box-sizing: border-box;
+}
+
+.evento-principal h1 {
+    font-size: 1.2rem;
+    color: var(--rojo-u);
+    text-align: center;
+}
+
+/* ---------------------------------
+   SLIDER
+---------------------------------- */
+
+.slider-wrapper {
+    flex: 0 0 80%;
+    display: flex;
+    align-items: center;
+    background-color: var(--fondo-slider);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.cuadro-eventos {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.cuadro-eventos::-webkit-scrollbar {
+    display: none;
+}
+
+/* ---------------------------------
+   TÍTULO ÁLBUM
+---------------------------------- */
+
+.titulo-album {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 30px 0;
+    color: var(--rojo-u);
+}
+
+/* ---------------------------------
+   FLECHAS
+---------------------------------- */
+
+.nav-btn {
+    flex: 0 0 40px;
+    height: 400px;
+    background-color: rgba(177, 70, 70, 0.4);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 5;
+    transition: background 0.3s;
+    border-radius: 12px;
+}
+
+.nav-btn:hover {
+    background-color: rgba(177, 70, 70, 0.7);
+}
+
+/* MARCADORES */
+
+#inicio,
+#final {
+    width: 1px;
+    flex-shrink: 0;
+}
+
+/* ---------------------------------
+   BOTONES AÑO
+---------------------------------- */
+
+.anio-btn {
+    background: none;
+    border: none;
+    width: 100%;
+    color: #d9534f;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    border-bottom: 4px solid #d9534f;
+    padding-bottom: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.anio-btn:hover {
+    background-color: rgba(217, 83, 79, 0.1);
+    transform: scale(1.05);
+}
+
+.anio-btn:active {
+    transform: scale(0.95);
+}
+
+.anio-btn.activo {
+    background-color: #d9534f;
+    color: white;
+    border-radius: 10px;
+}
+
+/* ---------------------------------
+   SECCIÓN FOTOS
+---------------------------------- */
+
+.fondo-seccion-fotos {
+    background-color: #f0f0f0;
+    padding: 40px 20px;
+    border-radius: 20px;
+    margin: 50px 20px 20px;
+    border: 4px solid var(--rojo-u);
+}
+
+.contenedor-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 0 10px;
+}
+
+.cuadro-fotos {
+    flex: 5;
+    background: var(--fotos);
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 30px;
+    height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cuadro-anio {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    height: 400px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+    border: 4px solid var(--borde-cuadro);
+}
+
+.cuadro-anio h1 {
+    text-align: center;
+}
+
+/* ---------------------------------
+   FOTOS MINI
+---------------------------------- */
+
+.foto-item {
+    display: flex;
+    flex-direction: column;
+
+    width: 160px;
+    height: 200px;
+
+    padding: 10px;
+    gap: 5px;
+
+    background-color: var(--foto-mini);
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* 70% arriba */
+.foto-item-interno {
+    flex: 0 0 70%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+}
+
+/* 25% abajo */
+.foto-item-botones {
+    flex: 0 0 25%;
+    border-radius: 5px;
+    background-color: var(--foto-mini);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*-------------boton corazon -----------------------*/
+.foto-item-botones {
+    position: relative;
+}
+
+/* base común */
+.miniboton input {
+    display: none;
+}
+
+.miniboton span {
+    position: absolute;
+    top: 0px;
+
+    font-size: 25px;
+    cursor: pointer;
+    color: #aaa;
+
+    transition: color 0.3s ease, transform 0.1s ease;
+}
+
+/* efecto al activar */
+.miniboton input:checked+span {
+    transform: scale(1.2);
+}
+
+/*---------------cambios especificos--------------*/
+/* corazón */
+.miniboton.heart span {
+    right: 5px;
+}
+
+.miniboton.heart input:checked+span {
+    color: crimson;
+}
+
+/* estrella */
+.miniboton.star span {
+    right: 35px;
+}
+
+.miniboton.star input:checked+span {
+    color: gold;
+}
+
+/*------------------------------------------------*/
+/*-----------------------------------------------*/
+.foto-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------------------------------
+   SCROLL PERSONALIZADO
+---------------------------------- */
+
+.cuadro-fotos::-webkit-scrollbar,
+.cuadro-anio::-webkit-scrollbar {
+    width: 20px;
+}
+
+.cuadro-fotos::-webkit-scrollbar-track,
+.cuadro-anio::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== VARIABLES Y RESET ===== */
+:root {
+    --primary-color: #A91B0D;
+    --secondary-color: #990300;
+    --dark-color: #222222;
+    --light-color: #f4f4f4;
+    --accent-color: #0066CC;
+    --text-color: #333333;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+
+    /* Mantener variables existentes */
+    --foto-mini: #fafafa;
+    --fotos: #e0e0e0;
+    --accent: #fafafa;
+    --carrera: #ffffff;
+    --fondo-eventos: #cbcbcb;
+    --fondo-slider: #cbcbcb;
+    --rojo-u: #A91B0D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+/* ===== HEADER NUEVO (Clases adicionales) ===== */
+.main-header {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border: 2px black;
+    /*padding: 0 30px;  Mantener padding similar al header existente */
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+
+
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-direction: row;
+    width: 100%;
+
+}
+
+.logo {
+    height: 60px;
+    width: 100%;
+
+
+}
+
+
+
+
+
+
+.main-nav {
+    flex: 1;
+    width: 90%;
+    /* Ocupa el espacio disponible */
+    /* Separación del logo */
+}
+
+
+/* Navegación del nuevo header */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    /* o center */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--dark-color);
+    padding: 10px 15px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Botones mejorados (adicionales) */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-login {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-login:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Icono SVG (reemplaza Font Awesome) */
+.icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ===== MANTENER TODAS LAS REGLAS EXISTENTES DE do.css AQUÍ ===== */
+
+/* ===== Fuente y estilos generales ===== */
+/* ... resto del código CSS existente ... */

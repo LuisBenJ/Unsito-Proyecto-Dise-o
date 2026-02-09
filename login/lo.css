@@ -7,33 +7,6 @@ body {
   color: #2e2e2e; /* texto oscuro */
 }
 
-/* ===== Encabezado ===== */
-header {
-  background-color: #680c07; /* Primario */
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-header h1 {
-  margin: 0;
-}
-
-/* ===== Menú de navegación ===== */
-nav {
-  background-color: #c9a227; /* Dorado suave */
-  padding: 10px;
-  text-align: center;
-}
-nav a {
-  color: #2e2e2e; /* Texto oscuro sobre dorado */
-  text-decoration: none;
-  margin: 0 15px;
-  font-weight: bold;
-}
-nav a:hover {
-  color: #680c07; /* Hover primario */
-}
-
 /* ===== Contenedor genérico ===== */
 .container,
 .form-container {
@@ -125,4 +98,188 @@ footer .social a {
 }
 footer .social a:hover {
   color: #680c07; /* Hover primario */
+}
+
+
+
+
+/* ===== Encabezado ===== */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: white;
+    padding: 15px 30px;
+}
+
+header img {
+    height: auto;
+    /* se adapta */
+    max-height: 80px;
+    /* límite máximo */
+    max-width: 100%;
+}
+
+header .titulo h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header .titulo h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Botón hamburguesa */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    /* base do.css */
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: block;
+    /* oculto en escritorio (control vía media query) */
+}
+
+/* Botón login */
+.login-button {
+    background-color: purple;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-button:hover {
+    background-color: darkviolet;
+}
+
+/* ===== Menú desplegable móvil ===== */
+nav.menu {
+    background-color: #A91B0D;
+    max-height: 0;
+    /* oculto por defecto */
+    overflow: hidden;
+    /* oculta contenido */
+    transition: max-height 0.4s ease;
+    /* animación suave */
+}
+
+nav.menu.open {
+    max-height: 300px;
+    /* despliegue base do.css */
+}
+
+nav.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    text-align: center;
+}
+
+nav.menu li {
+    margin: 10px 0;
+}
+
+nav.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav.menu a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Menú de navegación superior ===== */
+nav {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.nav-menu li {
+    flex: 1;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    border-bottom: 3px solid transparent;
+}
+
+.nav-menu a:hover {
+    background-color: #f0f0f0;
+}
+
+.nav-menu a.active {
+    color: rgb(138, 47, 47);
+    border-bottom: 3px solid rgb(138, 47, 47);
+    font-weight: bold;
+}
+
+/* ===== Carrusel ===== */
+.carousel {
+    width: 100%;
+    max-height: 400px;
+    /* límite máximo */
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slide 18s infinite;
+}
+
+.slides img {
+    flex: 0 0 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    16% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    49% {
+        transform: translateX(-200%);
+    }
+
+    66% {
+        transform: translateX(-300%);
+    }
+
+    82% {
+        transform: translateX(-400%);
+    }
+
+    100% {
+        transform: translateX(-500%);
+    }
 }

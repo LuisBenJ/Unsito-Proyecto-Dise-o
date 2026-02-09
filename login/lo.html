@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Administrador</title>
   <link rel="stylesheet" href="lo.css">
+
 </head>
+
 <body>
-  <header>
-    <h1>Universidad de la sierra sur</h1>
-    <p>Panel de Administración</p>
+  <header class="main-header">
+    <div class="header-container">
+      <div class="logo-section">
+        <img src="/imagenes/banner.png" alt="Logo Institucional" class="logo">
+
+      </div>
+
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a href="Inicio.html" class="active">Inicio</a></li>
+          <li><a href="/eventos/eventos.html">Eventos</a></li>
+          <li><a href="/Noti/NoticiasMain.html">Noticias</a></li>
+          <li><a href="/chismografo/chismografo.html">Chismografo</a></li>
+          <li><a
+              href="https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.unsis.edu.mx/&ved=2ahUKEwjqtuWHuv-RAxXrm2oFHb1XIHUQFnoECEUQAQ&usg=AOvVaw2KCtlWl8tkE_EpH88jZBtt">Academicos</a>
+          </li>
+          <li><a href="/Fotos/albumYeventoslocales.html">Recuerdos</a></li>
+        </ul>
+      </nav>
+
+
+    </div>
   </header>
-  <nav>
-    <a href="../Inicio.html">Inicio</a>
-    <a href="../Noti/NoticiasMain.html">Noticias</a>
-    <a href="#">Contacto</a>
-  </nav>
-  
+
   <div class="container">
     <h2>Inicio de Sesión - Administrador</h2>
     <form action="cuestio.html" method="get">
+
       <div class="form-group">
         <label for="usuario">Usuario</label>
         <input type="text" id="usuario" name="usuario" placeholder="Ingresa tu usuario">
@@ -30,10 +48,12 @@
       </div>
 
       <input type="submit" value="Ingresar">
-     
+
     </form>
     <p class="date">Acceso exclusivo para administradores del periódico escolar</p>
   </div>
+
+
   <footer>
     <p>© 2025 Universidad de la Sierra Sur - Todos los derechos reservados</p>
     <div class="social">
@@ -43,5 +63,5 @@
     </div>
   </footer>
 </body>
-</html>
 
+</html>

@@ -660,9 +660,6 @@ footer .social a:hover {
 
 
 
-
-
-
 :root {
     --foto-mini: #fafafa;
     --fotos: #e0e0e0;
@@ -859,8 +856,18 @@ footer .social a:hover {
     height: 400px;
     overflow-y: auto;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #af79a4 transparent;
+
+    box-shadow: 0 2px 6px rgba(158, 125, 156, 0.1);
 }
 
+
+/*------------------------*/
 .cuadro-anio {
     flex: 1;
     background: white;
@@ -870,6 +877,14 @@ footer .social a:hover {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     overflow-y: scroll;
     border: 4px solid var(--borde-cuadro);
+    
+     overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #af79a4 transparent;
+
+    box-shadow: 0 2px 6px rgba(158, 125, 156, 0.1);
 }
 
 .cuadro-anio h1 {
@@ -967,13 +982,13 @@ footer .social a:hover {
 /*-----------------------------------------------*/
 .foto-item:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
 }
 
 /* ---------------------------------
    SCROLL PERSONALIZADO
 ---------------------------------- */
-
+/* Chrome, Edge, Safari */
 .cuadro-fotos::-webkit-scrollbar,
 .cuadro-anio::-webkit-scrollbar {
     width: 20px;
@@ -981,23 +996,97 @@ footer .social a:hover {
 
 .cuadro-fotos::-webkit-scrollbar-track,
 .cuadro-anio::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 10px;
+    background: transparent;
+}
+
+.cuadro-fotos::-webkit-scrollbar-thumb,
+.cuadro-anio::-webkit-scrollbar-thumb {
+    background-color:var(--fondo-slider);
+    border-radius: 20px;
+}
+
+.cuadro-fotos::-webkit-scrollbar-thumb:hover,
+.cuadro-anio::-webkit-scrollbar-thumb:hover {
+    background-color: var(--fondo-slider);
 }
 
 
+/* ---------------------------------
+   LIGHTBOX CSS
+---------------------------------- */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
 
+.lightbox:target {
+    display: flex;
+}
 
+.lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 15px;
+}
 
+/* botones */
+.lightbox a {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    text-decoration: none;
+    padding: 10px;
+}
 
+.lightbox .prev { left: 30px; }
+.lightbox .next { right: 30px; }
+.lightbox .close {
+    top: 20px;
+    right: 30px;
+    font-size: 3.5rem;
+}
+/*-----------------------------------*/
 
+/* ---------------------------------
+   LIGHTBOX EVENTO PRINCIPAL
+---------------------------------- */
+.evento-principal-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
 
+.evento-principal-lightbox:target {
+    display: flex;
+}
 
+.evento-principal-lightbox img {
+    max-width: 85%;
+    max-height: 85%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
 
-
-
-
-
+/* botón cerrar */
+.evento-principal-lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 3.5rem;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*-------------------------------------*/
 
 /* ===== VARIABLES Y RESET ===== */
 :root {
